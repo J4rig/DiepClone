@@ -6,11 +6,6 @@ public class PlayerRotation : MonoBehaviour
 {
     [SerializeField] private Camera mainCam;
     private Vector3 mousePos;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -23,6 +24,6 @@ public class PlayerMovement : MonoBehaviour
 
         direction = new Vector2(xAxis, yAxis).normalized;
         
-        rb.velocity = direction * speed * Time.deltaTime;    
+        rb.velocity = direction * speed * Time.deltaTime;
     }
 }

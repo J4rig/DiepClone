@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6855424175218406442}
   - component: {fileID: 7011802311835186470}
   - component: {fileID: 7515448196033489875}
+  - component: {fileID: -8899282192717250862}
+  - component: {fileID: -469076299397141451}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -119,6 +121,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24345330b4165d4b97160924544b182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCam: {fileID: 0}
-  rb: {fileID: 0}
   force: 5
+  timeToLive: 2
+--- !u!114 &-8899282192717250862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221509778550356105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd67f7363be86241bcccceb640e7e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  tags:
+  - Box
+--- !u!58 &-469076299397141451
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221509778550356105}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

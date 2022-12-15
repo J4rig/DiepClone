@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 914741684}
   - component: {fileID: 914741683}
   - component: {fileID: 914741685}
+  - component: {fileID: 914741686}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -354,6 +355,21 @@ MonoBehaviour:
   bulletTransform: {fileID: 914741684}
   canFire: 1
   firingCooldown: 0.3
+--- !u!114 &914741686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914741682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd67f7363be86241bcccceb640e7e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  tags:
+  - Box
 --- !u!1 &1414260753
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,9 +383,11 @@ GameObject:
   - component: {fileID: 1414260755}
   - component: {fileID: 1414260754}
   - component: {fileID: 1414260758}
+  - component: {fileID: 1414260759}
+  - component: {fileID: 1414260760}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -500,7 +518,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c79f2a981fac749b2cea6cecc1abef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1414260759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414260753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c7c56215f8d65449a249b715d2db69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!114 &1414260760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414260753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd67f7363be86241bcccceb640e7e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   damage: 20
+  tags:
+  - Player
 --- !u!1 &1923868271
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +560,7 @@ GameObject:
   - component: {fileID: 1923868275}
   - component: {fileID: 1923868274}
   - component: {fileID: 1923868277}
+  - component: {fileID: 1923868278}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -654,3 +700,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &1923868278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923868271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd67f7363be86241bcccceb640e7e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  tags:
+  - Box

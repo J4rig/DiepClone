@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BulletSettings : MonoBehaviour
@@ -11,6 +12,8 @@ public class BulletSettings : MonoBehaviour
     private Transform tr;
     [SerializeField] private float force;
     private Vector3 direction;
+    private float time;
+    [SerializeField] private float timeToLive;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +25,22 @@ public class BulletSettings : MonoBehaviour
         direction = mousePos - tr.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
+    }
+
+    private void Update()
+    {
+        time += Time.deltaTime;
+        if (time >= timeToLive)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GameObject().CompareTag("Box"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

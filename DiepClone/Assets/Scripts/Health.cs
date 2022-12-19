@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     public int maxHealth;
     public int health;
 
+    [SerializeField] private int XPValue;
+
     public Slider slider;
 
     private void Start()
@@ -23,6 +25,8 @@ public class Health : MonoBehaviour
         slider.value = health;
         if (health <= 0)
         {
+            GameObject.FindWithTag("Player").GetComponent<XPManager>().score += XPValue;
+            GameObject.FindWithTag("Player").GetComponent<XPManager>().XP += XPValue;
             Destroy(gameObject);
         }
     }

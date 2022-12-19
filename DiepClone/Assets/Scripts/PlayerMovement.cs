@@ -26,4 +26,9 @@ public class PlayerMovement : MonoBehaviour
         
         rb.velocity = direction * speed * Time.deltaTime;
     }
+
+    private void Update()
+    {
+        GameObject.FindWithTag("MainCamera").GetComponent<Transform>().position = new Vector3(transform.position.x, transform.position.y, -10);
+    }
 }

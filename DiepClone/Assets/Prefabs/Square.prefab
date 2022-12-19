@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 100
+  XPValue: 50
   slider: {fileID: 5878417906496993812}
 --- !u!114 &5878417905274031864
 MonoBehaviour:
